@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão-2</title>
+</head>
+<body>
+    <h1>Antecessor/Suscessor</h1>
+    <button id="showInputBtn">verificar</button>
+
+    <script>
+        document.getElementById('showInputBtn').addEventListener('click', function() {
+   
+            var inputValue = prompt('Digite um numero inteiro:');
+            
+            if (inputValue === null || inputValue === '') {
+                alert('Nenhum valor inserido. Por favor, tente novamente.');
+            } else if (isNaN(inputValue) || !Number.isInteger(parseFloat(inputValue))) {
+                alert('O valor inserido não é um número inteiro. Por favor, tente novamente.');
+            } else {
+                var valor = parseInt(inputValue);
+                var antecessor = valor - 1;
+                var sucessor = valor + 1;
+                alert('Valor inserido: ' + valor + '\nAntecessor: ' + antecessor + '\nSucessor: ' + sucessor);
+            }
+        });
+    </script>
+</body>
+</html>
